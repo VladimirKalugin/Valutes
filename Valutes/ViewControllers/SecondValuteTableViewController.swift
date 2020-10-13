@@ -9,12 +9,15 @@ import UIKit
 
 class SecondValuteTableViewController: UITableViewController {
 
+    // MARK: - Private Properties
     private var valutes = [String: Valute]()
     private var keys = [String]()
     private var lastCell: UITableViewCell?
+    
+    // MARK: - Public Properties
     var selectValute: Valute?
     
-    
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,13 +31,12 @@ class SecondValuteTableViewController: UITableViewController {
        
     }
 
-
+    // MARK: - IBActions
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
     
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -43,7 +45,6 @@ class SecondValuteTableViewController: UITableViewController {
         return valutes.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secondValuteCell", for: indexPath)
 
@@ -69,18 +70,6 @@ class SecondValuteTableViewController: UITableViewController {
             cell?.accessoryType = .none
         }
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
-    
-
-    
-    // MARK: - Navigation
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-    
-    }
-    
 
 }

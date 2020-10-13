@@ -9,11 +9,15 @@ import UIKit
 
 class FirstValuteTableViewController: UITableViewController {
 
+    // MARK: - Private Properties
     private var valutes = [String: Valute]()
     private var keys = [String]()
     private var lastCell: UITableViewCell?
+    
+    // MARK: - Public Properties
     var selectValute: Valute?
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +28,9 @@ class FirstValuteTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-    
     }
 
-    
+    // MARK: - IBActions
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -42,7 +45,6 @@ class FirstValuteTableViewController: UITableViewController {
         return valutes.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstValuteCell", for: indexPath)
 
@@ -69,5 +71,4 @@ class FirstValuteTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
  
-
 }

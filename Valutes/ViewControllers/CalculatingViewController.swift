@@ -9,19 +9,21 @@ import UIKit
 
 class CalculatingViewController: UIViewController {
     
-    
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var firstValuteAmountTextField: UITextField!
     @IBOutlet weak var secondValuteAmountTextField: UITextField!
     
     @IBOutlet weak var firstValuteNameLabel: UILabel!
     @IBOutlet weak var secondValuteNameLabel: UILabel!
     
+    // MARK: - Public Properties
     var firstValute: Valute!
     var secondValute: Valute!
     
     var defaultValue = "1"
     
+    
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,7 @@ class CalculatingViewController: UIViewController {
         countFirstValute()
     }
     
+    // MARK: - IBActions
     @IBAction func firstUnwindSegue(_ segue: UIStoryboardSegue) {
         guard let firstTableVC = segue.source as? FirstValuteTableViewController else { return }
         firstValute = firstTableVC.selectValute
@@ -44,7 +47,7 @@ class CalculatingViewController: UIViewController {
         countSecondValute()
     }
     
-    
+    // MARK: - Private Methods
     private func countFirstValute() {
         if let firstTF = firstValuteAmountTextField.text {
             guard let amount = Double(firstTF) else { return }
@@ -68,8 +71,6 @@ class CalculatingViewController: UIViewController {
             firstValuteAmountTextField.text = String(format: "%.2f", totalFirstValue)
         }
     }
-    
-    
 }
 
 // MARK: - TextFieldDelegate

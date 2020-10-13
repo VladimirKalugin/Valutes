@@ -9,11 +9,12 @@ import UIKit
 
 class LoadingViewController: UIViewController {
 
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var fetchDataActivityIndicator: UIActivityIndicatorView!
     
     var valutes = [String: Valute]()
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +30,7 @@ class LoadingViewController: UIViewController {
         }
     }
 
+    // MARK: - Navigations
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let calculatingVC = segue.destination as? CalculatingViewController else { return }
         let defaultFistValute = "USD"
