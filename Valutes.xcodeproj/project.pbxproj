@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456F61912535462C004E420A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F61902535462C004E420A /* Model.swift */; };
+		456F619425354643004E420A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F619325354643004E420A /* DataManager.swift */; };
+		456F61972535468D004E420A /* FirstValuteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F61962535468D004E420A /* FirstValuteTableViewController.swift */; };
+		456F619A253546AE004E420A /* SecondValuteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F6199253546AE004E420A /* SecondValuteTableViewController.swift */; };
+		456F619E25354753004E420A /* CalculatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F619D25354753004E420A /* CalculatingViewController.swift */; };
 		45EE81342532F39F005DD175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE81332532F39F005DD175 /* AppDelegate.swift */; };
 		45EE81362532F39F005DD175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE81352532F39F005DD175 /* SceneDelegate.swift */; };
-		45EE81382532F39F005DD175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE81372532F39F005DD175 /* ViewController.swift */; };
+		45EE81382532F39F005DD175 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE81372532F39F005DD175 /* LoadingViewController.swift */; };
 		45EE813B2532F39F005DD175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45EE81392532F39F005DD175 /* Main.storyboard */; };
 		45EE813D2532F3A2005DD175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45EE813C2532F3A2005DD175 /* Assets.xcassets */; };
 		45EE81402532F3A2005DD175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45EE813E2532F3A2005DD175 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		456F61902535462C004E420A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		456F619325354643004E420A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		456F61962535468D004E420A /* FirstValuteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstValuteTableViewController.swift; sourceTree = "<group>"; };
+		456F6199253546AE004E420A /* SecondValuteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondValuteTableViewController.swift; sourceTree = "<group>"; };
+		456F619D25354753004E420A /* CalculatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatingViewController.swift; sourceTree = "<group>"; };
 		45EE81302532F39E005DD175 /* Valutes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valutes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45EE81332532F39F005DD175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45EE81352532F39F005DD175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45EE81372532F39F005DD175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45EE81372532F39F005DD175 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		45EE813A2532F39F005DD175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45EE813C2532F3A2005DD175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45EE813F2532F3A2005DD175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456F618A25353962004E420A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				45EE81332532F39F005DD175 /* AppDelegate.swift */,
+				45EE81352532F39F005DD175 /* SceneDelegate.swift */,
+				45EE81412532F3A2005DD175 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		456F618B253539C3004E420A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45EE81372532F39F005DD175 /* LoadingViewController.swift */,
+				456F619D25354753004E420A /* CalculatingViewController.swift */,
+				456F61962535468D004E420A /* FirstValuteTableViewController.swift */,
+				456F6199253546AE004E420A /* SecondValuteTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		456F618D2535436A004E420A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				45EE81392532F39F005DD175 /* Main.storyboard */,
+				45EE813E2532F3A2005DD175 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		456F618E25354386004E420A /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				45EE813C2532F3A2005DD175 /* Assets.xcassets */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		456F61A0253547DA004E420A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				456F61902535462C004E420A /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		456F61A1253547E4004E420A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				456F619325354643004E420A /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		45EE81272532F39E005DD175 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +120,12 @@
 		45EE81322532F39E005DD175 /* Valutes */ = {
 			isa = PBXGroup;
 			children = (
-				45EE81332532F39F005DD175 /* AppDelegate.swift */,
-				45EE81352532F39F005DD175 /* SceneDelegate.swift */,
-				45EE81372532F39F005DD175 /* ViewController.swift */,
-				45EE81392532F39F005DD175 /* Main.storyboard */,
-				45EE813C2532F3A2005DD175 /* Assets.xcassets */,
-				45EE813E2532F3A2005DD175 /* LaunchScreen.storyboard */,
-				45EE81412532F3A2005DD175 /* Info.plist */,
+				456F61A1253547E4004E420A /* DataManager */,
+				456F61A0253547DA004E420A /* Models */,
+				456F618A25353962004E420A /* SupportingFiles */,
+				456F618B253539C3004E420A /* ViewControllers */,
+				456F618D2535436A004E420A /* Storyboards */,
+				456F618E25354386004E420A /* Sourses */,
 			);
 			path = Valutes;
 			sourceTree = "<group>";
@@ -137,9 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45EE81382532F39F005DD175 /* ViewController.swift in Sources */,
+				456F619E25354753004E420A /* CalculatingViewController.swift in Sources */,
+				45EE81382532F39F005DD175 /* LoadingViewController.swift in Sources */,
+				456F619425354643004E420A /* DataManager.swift in Sources */,
 				45EE81342532F39F005DD175 /* AppDelegate.swift in Sources */,
+				456F61972535468D004E420A /* FirstValuteTableViewController.swift in Sources */,
 				45EE81362532F39F005DD175 /* SceneDelegate.swift in Sources */,
+				456F619A253546AE004E420A /* SecondValuteTableViewController.swift in Sources */,
+				456F61912535462C004E420A /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96YLZGPGQN;
-				INFOPLIST_FILE = Valutes/Info.plist;
+				INFOPLIST_FILE = Valutes/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96YLZGPGQN;
-				INFOPLIST_FILE = Valutes/Info.plist;
+				INFOPLIST_FILE = Valutes/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
