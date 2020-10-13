@@ -25,17 +25,23 @@ class CalculatingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
         firstValuteAmountTextField.text = defaultValue
         countFirstValute()
     }
     
-    @IBAction func firstUnwindSegue(_ segue: UIStoryboard) {
-        
+    @IBAction func firstUnwindSegue(_ segue: UIStoryboardSegue) {
+        guard let firstTableVC = segue.source as? FirstValuteTableViewController else { return }
+        firstValute = firstTableVC.selectValute
+        firstValuteNameLabel.text = firstValute.charCode
+        countFirstValute()
     }
     
-    @IBAction func secondUnwindSegue(_ segue: UIStoryboard) {
-//        guard let secondTableVC
-//        secondValute =
+    @IBAction func secondUnwindSegue(_ segue: UIStoryboardSegue) {
+        guard let secondTableVC = segue.source as? SecondValuteTableViewController else { return }
+        secondValute = secondTableVC.selectValute
+        secondValuteNameLabel.text = secondValute.charCode
+        countSecondValute()
     }
     
     
@@ -48,7 +54,6 @@ class CalculatingViewController: UIViewController {
             let secondValue = secondValute.value / Double(secondValute.nominal)
             let totalSecondValue = totalFirstValue / secondValue
             secondValuteAmountTextField.text = String(format: "%.2f", totalSecondValue)
-//                "\(totalSecondValue)"
         }
     }
     
@@ -87,14 +92,8 @@ extension CalculatingViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+
+        countFirstValute()
         view.endEditing(true)
-       
-        // ДОРАБОТАТЬ ИНТЕРФЕЙС!!!
-        
-        if firstValuteAmountTextField.isSelected == false {
-            countFirstValute()
-        } else if secondValuteAmountTextField.isSelected == false {
-            countSecondValute()
-        }
     }
 }

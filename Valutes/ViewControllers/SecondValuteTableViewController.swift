@@ -20,7 +20,7 @@ class SecondValuteTableViewController: UITableViewController {
 
         DataManager.shared.fetchData { (valutes) in
             self.valutes = valutes.valute
-            self.keys = Array(valutes.valute.keys)
+            self.keys = Array(valutes.valute.keys).sorted(by: <)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -73,14 +73,14 @@ class SecondValuteTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
     }
-    */
+    
 
 }
